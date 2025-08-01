@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== GLOBAL RESET & BASE ========== */
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0d1117;
+  color: #e5e7eb;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  @apply bg-gray-900 text-gray-200;
+}
+
+/* ========== FUTURISTIC UI ENHANCEMENTS ========== */
+
+input,
+textarea,
+select {
+  @apply bg-gray-800 text-white border border-gray-600 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-500 transition-all;
+}
+
+button {
+  @apply transition-all font-semibold tracking-wide;
+}
+
+button.primary {
+  @apply bg-cyan-500 hover:bg-cyan-400 text-white px-4 py-2 rounded-lg shadow-lg shadow-cyan-500/20;
+}
+
+button.secondary {
+  @apply bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-md;
+}
+
+/* ========== GLASSMORPHIC CONTAINERS ========== */
+
+.card-glass {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.05);
+}
+
+/* ========== TEXT EFFECTS ========== */
+
+.glow {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.neon-blue {
+  color: #00f0ff;
+  text-shadow: 0 0 5px #00f0ff, 0 0 10px #00f0ff;
+}
+
+.neon-pink {
+  color: #ff00c8;
+  text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #00f0ff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00f0ff;
+  }
+}
+
+.animated-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
